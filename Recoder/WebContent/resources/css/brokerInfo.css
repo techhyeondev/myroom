@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+.ft {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.wrapper {
+    margin: 0 auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+body {
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+/* section broker_mypage */
+.broker_mypage{
+    width: 70%;
+    margin: 200px auto;
+}
+.broker_mypage h1{
+    margin-bottom: 30px;
+}
+.broker_mypage .broker_info{
+
+}
+.broker_mypage .broker_info .broker_card{
+    padding: 20px;
+    background-color: #ccc;
+    position: relative;
+}
+.broker_mypage .broker_info .broker_card .table{
+    width: 40%;
+    border-radius: 10px;
+    float: left;
+    margin: 0;
+}
+.broker_mypage .broker_info .broker_card .table thead tr th {
+    border: none;
+}
+
+.broker_mypage .broker_info .broker_card .table tbody{
+    
+}
+.broker_mypage .broker_info .broker_card .table tbody tr{
+    
+}
+
+.broker_mypage .broker_info .broker_card .table tbody > tr th{
+    width: 15%;
+    padding-left: 5%;
+}
+.broker_mypage .broker_info .broker_card button{
+    float: right;
+    right: 0;
+    bottom: 0;
+}
+
+.broker_mypage .broker_info .broker_card .broker_link{
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    padding: 20px;
+}
+
+.broker_mypage .broker_info .broker_card .broker_link a {
+    float: left;
+    color: #161e27;
+    margin-left: 20px;
+    padding: 10px;
+    border: 2px solid #161e27; 
+    font-weight: bold;
+    display: block;
+}
+
+.broker_mypage .broker_info .broker_card .broker_link a span{
+    font-size: 18px;
+    display: block;
+    color: #000;
+    position: relative;
+    box-sizing: border-box; 
+}
+
+.broker_mypage .broker_info .broker_card .broker_link a span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0;
+    height: 1px;
+    background: #161e27;
+    transition: all .5s;
+}
+.broker_mypage .broker_info .broker_card .broker_link a span:hover:after {
+    width: 100%;
+}
+
+/* section room_manager */
+.room_manager{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.room_manager h1{
+    margin-bottom: 50px;
+}
+.room_manager .room_wrapper{
+
+}
+.room_manager .room_wrapper .room_list{
+    margin-bottom: 100px;
+    position: relative;
+}
+.room_manager .room_wrapper .room_list .room{
+    float: left;
+    width: 25%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.room_manager .room_wrapper .room_list .room .img{
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+.room_manager .room_wrapper .room_list .room .img a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.room_manager .room_wrapper .room_list .room .img a img{
+    height: 200px;
+    display: block;
+    width: 100%;
+    transition: all .5s;
+}
+
+.room_manager .room_wrapper .room_list .room .img a:hover img {
+    transform: scale(1.2);
+    transition: all .5s;
+}
+
+.room_manager .room_wrapper .room_list .room h3{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.room_manager .room_wrapper .room_list .room .text{
+    margin-bottom: 35px;
+    line-height: 1.1;
+    height: 50px;
+    word-wrap: break-word;
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    display:-webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+}
+
+.room_manager .room_wrapper .room_list .room .text span{
+    opacity: .6;
+}
+.room_manager .room_wrapper .room_list .room .textspan:nth-child(1){
+    display: block;
+    margin-bottom: 5px;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+    width: 100%;
+
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+}
+.room_manager .room_wrapper .room_list .room .more{
+    width: 80px;
+    position: relative;
+    display: block;
+    color: #000;
+    padding: 10px 0;
+}
+
+.room_manager .room_wrapper .room_list .room  .more:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: all .5s;
+}
+.room_manager .room_wrapper .room_list .room :hover:after{
+    width: 100%;
+}
+ 
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    position: absolute;
+    color: #454d55;
+    border: 0;
+    background: none;
+    z-index: 1;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+ 
+.slick-prev {
+    left: 20px;
+}
+ 
+.slick-prev:after {
+      content: "\f104";
+    font: 40px/1 'FontAwesome';
+}
+ 
+.slick-next {
+    right: 20px;
+    text-align: right;
+}
+ 
+.slick-next:after {
+       content: "\f105";
+     font: 40px/1 'FontAwesome';
+}
+ 
+.slick-prev:hover:after,
+.slick-next:hover:after {
+    color: #7e7e7e;
+}
+
+.room_manager .room_wrapper .add_room {
+    float: right;
+}
+.room_manager .room_wrapper .add_room  a{
+    color: #161e27;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid #161e27; 
+    font-weight: bold;
+    display: block;
+}
+
+/* footer */
+.footer{
+    background-color: #161e27;
+    width: 100%;
+}
+.footer .footer_wrap{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-top: 200px;
+    color: rgb(160, 160, 160);
+}
+.footer .footer_wrap .footer_top {
+    height: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgb(160, 160, 160, .3);
+    padding-bottom: 70px;
+    box-sizing: border-box;
+}
+.footer .footer_wrap .footer_top .about li{
+    line-height: 50px;
+    float: left;
+    margin-right: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.footer .footer_wrap .footer_top .about li:last-child{
+    margin-right: 0px;
+}
+.footer .footer_wrap .footer_top .about li a:hover{
+    opacity: .3;
+}
+.footer .footer_wrap .footer_top .about li a{
+    color: rgb(160, 160, 160);
+}
+.footer .footer_wrap .footer_top i {
+    display: block;
+    animation-name: slide-up;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    padding: 10px 0 5px;
+}
+.footer .footer_wrap .footer_top > div{
+    display: block;
+    text-align: center;
+    border: 1px solid rgb(160, 160, 160);
+    box-sizing: border-box;
+    float: right;
+    color: rgb(160, 160, 160);
+    padding: 0 15px 10px;
+    font-size: 12px;
+    background-color: none;
+    cursor: pointer;
+}
+.footer .footer_wrap .footer_mid p{
+    line-height: 1.3;
+    margin-bottom: 50px;
+    font-size: 12px;
+}
+.footer .footer_wrap .footer_bottom {
+    padding-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+}
+.footer .footer_wrap .footer_bottom span{
+    font-size: 12px;
+    float: left;
+}
+.footer .footer_wrap .footer_bottom ul li{
+    float: right;
+    font-size: 20px;
+    position: relative;
+    margin-left: 50px;
+}
+.footer .footer_wrap .footer_bottom ul li:first-child{
+    margin-right: 15px;
+}
+.footer .footer_wrap .footer_bottom ul li:last-child{
+    margin-left: 0px;
+}
+.footer .footer_wrap .footer_bottom ul li a{
+    color: #fff;
+    z-index: 3000;
+}
+.footer .footer_wrap .footer_bottom ul li a:after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 20px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 100px;
+    background: rgba(116, 116, 116, 0.1);
+}
+.footer .footer_wrap .footer_bottom ul li i{
+    display: block;
+}
+
+
+/* 메인 글자 위로 */
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+/* 배경 이미지 트랜잭션 */
+@keyframes scaleani {
+    0%{
+        transform: scale(1.1);
+    }
+}
+.visual .slide li.slick-active img {
+    animation-name: scaleani;
+    animation-duration: 4.5s
+}
+
+/* 공지사항 애니메이션 */
+@keyframes slide-up2 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+/* 검색 애니메이션 */
+@keyframes slide-up3 {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}

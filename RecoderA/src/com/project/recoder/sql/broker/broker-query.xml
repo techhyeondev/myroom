@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<!-- 공인중개사 쿼리 -->
+
+
+<entry key="getListCount">
+SELECT COUNT(*) FROM AV_BROKER
+</entry>
+
+
+<entry key="selectRequestBrokerList">
+SELECT * FROM
+(SELECT ROWNUM BKNUM, V.*
+FROM
+(SELECT * FROM AV_BROKER ORDER BY MEM_NO2 ASC) V)
+WHERE BKNUM BETWEEN ? AND ?
+</entry>
+
+<!-- 게시글 상세 조회  -->
+<entry key="selectBoard">
+SELECT * FROM AV_BOARD
+WHERE BOARD_NO = ?
+</entry>
+
+
+
+
+</properties>

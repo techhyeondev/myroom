@@ -1,0 +1,163 @@
+
+     .report-manage > h2 {
+        text-align: center;
+        height: 100px;
+    }
+    
+    .search-area{
+        display : flex;
+        margin-left: 19%;
+        height:50px;
+    }
+    .search-area .search-input{
+        width:140px;
+        
+    }
+    .search-area .search-button{
+        background-color: rgb(174, 160, 236);
+        border: rgb(174, 160, 236);
+    }
+
+
+    /* 매물 영역 크기 조정 */
+    .total-item-area {
+        width: 70%;
+        height: 500px;
+        margin: auto;
+    }
+
+    .check-area {
+        width: 5%;
+        height: 100%;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .item-area {
+        width: 95%;
+        height: 100%;
+        border: 1px solid #868e96;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .item-info-area{
+        width: 100%;
+        height: 50%;
+        border-bottom: 1px solid #868e96;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .table-area {
+        width: 100%;
+        height: 250px;
+        overflow-y : auto;
+        float: left;
+        box-sizing: border-box;
+        -ms-overflow-style: none;
+    }
+	
+   .table-area::-webkit-scrollbar{ display:none; }
+	
+    .image-area {
+        width: 40%;
+        height: 100%;
+        border-right: 1px solid #868e96;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .title-info-area {
+        width: 60%;
+        height: 100%;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .title-area {
+        width: 100%;
+        height: 20%;
+        border-bottom: 1px solid #868e96;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .info-area {
+        width: 100%;
+        height: 80%;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .item-title {
+        width: 20%;
+        height: 100%;
+        border-right: 1px solid #868e96;
+        float: left;
+        box-sizing: border-box;
+        line-height : 50px;
+        font-weight : bold;
+        
+    }
+
+    .item-name {
+        width: 80%;
+        height: 100%;
+        float: left;
+        box-sizing: border-box;
+        line-height : 50px;
+        
+    }
+
+    .item-info {
+        width: 100%;
+        height: 20%;
+        border-bottom: 1px solid #868e96;
+        float: left;
+        box-sizing: border-box;
+        line-height : 38px;
+        font-weight : bold
+    }
+
+    .item-information {
+        width: 100%;
+        height: 150px;
+        float: left;
+        box-sizing: border-box;
+        overflow-y : scroll;
+        -ms-overflow-style: none;
+    }
+    .item-information::-webkit-scrollbar{ display:none; }
+
+
+
+    .table-striped {
+        width: 100%;
+
+    }
+
+
+    /* 삭제 버튼 영역*/
+    .button-area{
+        height: 80px;
+    }
+
+    .button-area .delete-item{
+        margin-top:20px;
+        margin-right: 15%;
+        background-color: rgb(174, 160, 236);
+        border: rgb(174, 160, 236);
+        
+    }
+
+    /* 페이지 영역 */
+    .pagination {
+        justify-content: center;
+    }
+

@@ -1,0 +1,48 @@
+.certi {
+    height: 100px;
+    width: 100px;
+}
+
+.top-section {
+    height: 100px;
+    text-align: center;
+}
+
+.table {
+    width: 70%;
+    margin: auto;
+}
+
+.table tr {
+    text-align: center;
+}
+
+
+.content-area {
+    width: 70%;
+    margin: auto;
+}
+
+.button-area{
+    height:100px;
+    margin-right : 15%;
+    margin-top:20px;
+}
+
+.approve-btn {
+    background-color: rgb(174, 160, 236);
+    border: rgb(174, 160, 236);
+    float:right;
+}
+
+.cancel-btn {
+    margin-right: 10px;
+    background-color: rgb(174, 160, 236);
+    border: rgb(174, 160, 236);
+    float:right;
+}
+
+
+.pagination {
+    justify-content: center;
+}

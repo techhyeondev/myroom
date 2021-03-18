@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<!-- 다음 매물 번호 조회 -->
+	<entry key="visitSend">
+		INSERT INTO VISIT VALUES(?, ?, SYSDATE, ?)
+	</entry>
+
+	<entry key="selectRoom">
+		SELECT DISTINCT(ROOM_NO) ,ROOM_TITLE ,ROOM_INFO ,GMEM_NO 
+		FROM ROOM
+		JOIN VISIT USING(ROOM_NO)
+        JOIN VISIT_STATUS USING (VISIT_CODE)
+		WHERE DELETE_FL = 'N' AND GMEM_NO = ? AND VISIT_CODE = 1
+	</entry>
+	
+	<entry key="selectVisit">
+		SELECT MEM_NO ,ROOM_NO ,VISIT_DT ,VISIT_CODE, MEM_NICK
+		FROM VISIT
+		JOIN MEMBER USING(MEM_NO)
+	</entry>
+
+	<!-- 이미지 가져오기 -->
+	<entry key="selectRoomImg">
+		SELECT ROOM_NO, ROOM_IMG_NAME
+		FROM ROOM
+		JOIN ROOM_IMG USING(ROOM_NO)
+		WHERE DELETE_FL = 'N' AND GMEM_NO = ? AND ROOM_IMG_LEVEL = 0
+	</entry>
+	
+	<entry key="visitRoomCheck">
+		UPDATE VISIT SET VISIT_CODE = 2 WHERE  MEM_NO = ? AND ROOM_NO = ?
+	</entry>
+</properties>

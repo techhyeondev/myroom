@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<entry key="loginMember">
+SELECT MEM_NO, MEM_ID, MEM_NICK, MEM_TEL, MEM_EMAIL, MEM_GRADE
+FROM MEMBER
+WHERE MEM_ID = ?
+AND MEM_PW = ?
+AND  SCSN_FL = 'N'
+AND MEM_GRADE ='G'
+</entry>
+
+<entry key="signUp">
+INSERT INTO MEMBER
+VALUES(SEQ_MEMNO.NEXTVAL,?,?,?,?,?,DEFAULT, 'G')
+</entry>
+
+<entry key="chkPwd">
+SELECT COUNT(*) FROM MEMBER
+WHERE MEM_NO = ?
+AND MEM_PW = ?
+</entry>
+
+<entry key="updateStatus">
+UPDATE MEMBER
+SET SCSN_FL = 'Y'
+WHERE MEM_NO=?
+</entry>
+
+<entry key="updateMember">
+UPDATE MEMBER 
+SET MEM_EMAIL=?,
+      MEM_TEL=?,
+      MEM_PW=?,
+      MEM_NICK=?
+WHERE MEM_NO=? 
+</entry>
+
+<entry key="currentPW">
+SELECT MEM_PW
+FROM MEMBER
+WHERE MEM_NO = ?
+</entry>
+
+
+<entry key="heartInsert">
+INSERT INTO PICK_ROOM VALUES(?, ?) 
+</entry>
+
+<entry key="heartcheck">
+SELECT COUNT(*) FROM PICK_ROOM
+WHERE ROOM_NO = ?
+AND MEM_NO = ?
+</entry>
+
+<entry key="heartDelete">
+DELETE FROM PICK_ROOM
+WHERE ROOM_NO = ?
+AND MEM_NO = ?
+</entry>
+
+<entry key="nickDupCheck">
+SELECT COUNT(*)
+FROM MEMBER
+WHERE MEM_NICK = ?
+AND  SCSN_FL = 'N'
+</entry>
+
+
+<entry key="selectimgList">
+SELECT ROOM_IMG_NAME, ROOM_NO
+FROM ROOM_IMG
+JOIN PICK_ROOM USING(ROOM_NO)
+WHERE ROOM_IMG_LEVEL=0
+AND MEM_NO=?
+</entry>
+
+
+<entry key="selectRoomList">
+SELECT ROOM_NO, ROOM_TITLE, ROOM_INFO
+FROM ROOM
+JOIN PICK_ROOM USING(ROOM_NO)
+WHERE MEM_NO=?
+</entry>
+
+
+<entry key="selectReviewList">
+SELECT ROOM_NO, ROOM_TITLE, ROOM_INFO
+FROM ROOM
+JOIN REVIEW USING(ROOM_NO)
+WHERE MEM_NO=?
+</entry>
+
+<entry key="selectReviewimg">
+SELECT ROOM_IMG_NAME, ROOM_NO
+FROM ROOM_IMG
+JOIN REVIEW USING(ROOM_NO)
+WHERE ROOM_IMG_LEVEL=0
+AND MEM_NO=?
+</entry>
+
+
+</properties>

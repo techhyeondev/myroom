@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<!-- 전체(삭제/등록된 모든)룸 개수 반환 -->
+<entry key="getListCount">
+SELECT COUNT(*) FROM AV_ROOM
+</entry>
+
+<!-- 전체 ROOM (삭제여부 관계없이 모두) 조회 SQL -->
+<entry key="selectRoomList">
+SELECT * FROM
+(SELECT ROWNUM RNUM, V.*
+FROM
+(SELECT * FROM AV_ROOM ORDER BY ROOM_NO DESC) V)
+WHERE RNUM BETWEEN ? AND ?
+</entry>
+
+<!-- 신고 매물 수 조회   -->
+<entry key="getListCount1">
+SELECT COUNT(*) FROM RV_ROOM
+</entry>
+
+<!-- 신고 매물 정보 조회  -->
+<entry key="selectFakeList">
+SELECT * FROM
+(SELECT ROWNUM RVNUM, V.*
+FROM
+(SELECT * FROM RV_ROOM ORDER BY REPORT_COUNT DESC) V)
+WHERE RVNUM BETWEEN ? AND ?
+</entry>
+
+<entry key="selectReportList">
+SELECT CATEGORY_NM, MEM_NICK,  RP_CONTENT, ROOM_NO
+FROM REPORT
+JOIN REPORT_CATEGORY USING(CATEGORY_CD)
+JOIN MEMBER USING(MEM_NO)
+ORDER BY PR_CREATE_DT DESC
+</entry>
+
+
+</properties>

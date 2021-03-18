@@ -1,0 +1,36 @@
+.top-section{
+    height: 100px;
+    text-align: center;
+}
+
+.search-area{
+    height:100px;
+    margin-left : 15%;
+}
+
+.search-btn{
+    background-color: rgb(174, 160, 236);
+    border: rgb(174, 160, 236);
+    vertical-align: top;
+}
+
+.content-area{
+    width:70%;
+    margin:auto;
+}
+
+.stop-btn{
+    background-color: rgb(174, 160, 236);
+    border: rgb(174, 160, 236);
+}
+
+.recover-btn{
+    margin-right:10px;
+    background-color: rgb(174, 160, 236);
+    border: rgb(174, 160, 236);
+}
+
+
+.pagination {
+justify-content: center;
+}  

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<entry key="reportSend">
+		INSERT INTO REPORT VALUES(SEQ_REPORTNO.NEXTVAL, ?, ?, SYSDATE, ? , ?, ?)
+	</entry>
+	<entry key="increaseRoomRportCount">
+		UPDATE ROOM SET REPORT_COUNT = REPORT_COUNT + 1 WHERE ROOM_NO = ?
+	</entry>
+	
+	<entry key="reportChk">
+	SELECT COUNT(*) FROM REPORT
+	WHERE ROOM_NO = ?
+	AND MEM_NO = ?
+	</entry>
+
+</properties>

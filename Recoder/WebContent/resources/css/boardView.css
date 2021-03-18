@@ -1,0 +1,77 @@
+        @font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+        }
+
+ .wrapper{
+     background-color: white
+ }
+ 
+   #btn1, #btn2, #deleteBtn{
+    display: inline-block;
+    background-color: #EE9BA3;
+    color: white;
+    border: none;
+    }
+    
+    .alert-danger{
+    color#fff;
+    }
+
+       #board-main{
+        font-family: 'TmoneyRoundWindExtraBold';
+           text-align: center;
+           margin-top: 100px;
+           margin-bottom: 100px;
+       }
+       .notice_block{
+           background-color: pink;
+           border-radius: 10%;
+       }
+
+       .table th{
+        width: 100px;
+        border-bottom: 1px solid #ccc;
+       }
+       .table td{
+        border-bottom: 1px solid #ccc;
+       }
+
+
+       #table-name-large{
+           font-size: 23pt;
+       }
+
+       #board-content{
+           width: 100%;
+          
+       }
+
+       #deleteBtn{
+           margin-right: 10px;
+       }
+
+       /* 댓글 부분 */
+       .CommentItem{
+           border-bottom:  0.5px solid #ccc;
+            padding: 5px;
+       }
+       .comment-title{
+           padding-left: 30px;
+       }
+       .comment-list{
+           list-style: none;
+       }
+
+       .comment_id_box{
+           font-weight: bolder;
+           color: #000;
+       }
+
+       .comment_info_box{
+           font-size: small;
+           color: rgb(155, 155, 155);
+       }
+

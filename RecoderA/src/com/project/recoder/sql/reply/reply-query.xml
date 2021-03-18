@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<!--  recoderA reply  -->
+
+
+<!-- 댓글 목록 조회 -->
+<entry key="selectList">
+SELECT * FROM AV_REPLY WHERE BOARD_NO = ?
+</entry>
+
+
+
+<!-- 댓글 삭제용 -->
+<entry key="updateReplyDelete">
+UPDATE "COMMENT" SET
+DELETE_FL = 'Y'
+WHERE COMMENT_NO = ?
+</entry>
+<!-- 댓글  복구용 -->
+<entry key="updateReplyRecover">
+UPDATE "COMMENT" SET
+DELETE_FL = 'N'
+WHERE COMMENT_NO = ?
+</entry>
+</properties>
+

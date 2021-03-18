@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+.ft {
+    font-family: 'Noto Sans KR', sans-serif;
+} 
+.mainFont{
+	font-family: 'TmoneyRoundWindExtraBold';
+} 
+
+.wrapper{
+    margin: 0 auto;
+    height: 200px;
+}
+
+.loginBtn{
+	background-color: rgb(174, 160, 236); 
+	border: rgb(174, 160, 236);
+}
+
+
+nav{
+
+    width:100%;
+    height:100px;
+    padding-top:10px;
+    background-color: white;
+}
+
+nav > * {
+
+    float: left;
+    line-height: 50px;
+}
+
+/* 로고영역 */
+.logo_area{
+    width: 20%;
+    height: 100%;
+    text-align : center;
+}
+
+#logo_img{
+    width: 100px;
+}
+
+
+/* 메뉴영역 */
+.menu_area{
+    margin:0;
+    padding:0;
+    /* 영역의 고유한 마진과 패딩을 모두 제거 */
+    width:60%;
+    height: 100%;
+    list-style-type:none;
+    
+}
+
+/* 메뉴 영역 카테고리 */
+.menu_area > li{
+    float: left;
+    width : 30%;
+    height: 100%;
+    
+}
+
+/* 메뉴 영역 카테고리의 a태그 영역 지정 */
+.menu_area > li > a{
+
+    display:block;
+    width:100%;
+    height: 100%;
+    text-align:center;
+    text-decoration: none;
+    line-height:100px;
+
+    
+}
+.menu_area >li:hover{
+    background-color: rgb(174, 160, 236);
+}
+.menu_area ul>li:hover{
+    background-color: rgb(112, 94, 194);
+}
+
+.menu_area>li>ul{
+    padding:0px;
+    margin:0px;
+    width:100%;
+  
+    list-style-type:none;
+    background-color: rgb(174, 160, 236);
+    
+    opacity:0;
+}
+
+.menu_area ul>li>a{
+    opacity:0;
+}
+
+.menu_area ul>li{
+    height:0;
+    line-height: 0;
+    border-radius:10px;
+}
+.menu_area >li:hover ul, .menu_area > li:hover ul a{
+    opacity: 1;
+}
+.menu_area li:hover ul li{
+    text-align:center;
+    height:40px;
+    line-height:40px;
+}
+
+.menu_area li{
+    transition-duration: 0.5s;
+}
+.main_area li ul{
+    transition-duration: 0.5s;
+}
+
+/* 로그인 영역 */
+.login_area{
+    width : 20%;
+    height: 100%;
+    text-align : center;
+    font-size : 12px;
+    color : black;
+    padding-top : 30px;
+}
+
+
+.menu_area a,
+.login_area a{
+    text-decoration: none;
+    color: black;
+    height : 100%;
+    font-weight : bold;
+}

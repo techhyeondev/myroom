@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ }
+ 
+ @font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ body {
+    background:#FAF3EC;
+    font-family: 'TmoneyRoundWindExtraBold';
+ }
+ ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   /* color: #748194; */
+ }
+ ::-moz-placeholder { /* Firefox 19+ */
+   color: #748194;
+ }
+ :-ms-input-placeholder { /* IE 10+ */
+   color: #748194;
+ }
+ :-moz-placeholder { /* Firefox 18- */
+   color: #748194;
+ }
+ .container{
+    position:absolute;
+     width: auto;
+     height:auto;
+     top: calc(50% - 240px);
+     left: calc(40% - 160px);
+    border-radius:15px 15px 15px 15px;
+ }
+
+ .footer{
+    height: 200px;
+ }
+
+ .c1{
+    box-shadow:0 0 10px grey;
+    background-color:white;
+    width: 700px;
+    height:1000px;
+    display:inline-block;
+    border-radius:15px 15px 15px 15px;
+ }
+  
+ .c2{
+    background-color:white;
+    width:700px;
+    height: 917px;
+    border-radius:15px;
+    position:absolute;
+    left: 0;
+    top:80px;
+    display:inline-block;
+    z-index: 3;
+ }
+ 
+ #left{
+      border-radius:15px 0px 0px 15px;
+  }
+ 
+ #left, #right {
+    color:black;
+    display: inline-block;
+    width: 350px;
+    height: 950px;
+}
+ #right{
+    border-radius:15px 15px 15px 0px;
+    position: absolute;
+    right: 0;
+ }
+ .left_hover{
+    background-color:#EE9BA3;
+    color:#F6F7F9;
+    box-shadow: 5px 0 18px -10px #333;
+    z-index:1;
+    position:absolute;
+ }
+ .right_hover{
+    background-color: #EE9BA3;
+    color:#F6F7F9;
+    box-shadow: -5px 0 15px -10px #333;
+    z-index:1;
+    position:absolute;
+ }
+ .s1class{
+    color:#748194;
+    position:absolute;
+    top:0;
+    left:63%;
+    margin-left: -50%;
+ }
+ 
+ .s1class span,  .s2class span{
+    display:block;
+ }
+ .su{
+    font-size:15px;
+ }
+ .s2class{
+    color:#748194;
+    position:absolute;
+    top:0;
+    right:63%;
+    margin-right: -50%; 
+ }
+ .mainhead{
+    color:white;
+    font-size:30px;
+    text-align:center;
+    margin-top:50px;
+ }
+
+/* 
+ .username{
+    font-weight: bold;
+    width: 300px;
+    margin: 0 180px 15px;
+    height: 35px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #F6F7F9;
+    color: #748194;
+    font-size: 14px;
+ } */
+
+ .username{
+  /*   display: block; */
+   font-weight: bold;
+   width: 300px;
+   margin-top: 0;
+   margin-bottom: 0;
+   margin-left: 180px;
+   height: 35px;
+   padding: 6px 15px;
+   border-radius: 5px;
+   outline: none;
+   border: none;
+   background: #F6F7F9;
+   color: #748194;
+   font-size: 14px;
+}
+
+ .validate-area{
+ 	display:inline-block;
+     height: 25px;
+     margin: 0 180px;
+     font-size: 10px;
+     font-family: 'IBMPlexSansKR-Regular';
+     
+ }
+ .brokerImg{
+ 	display:inline-block;
+     margin: 0 180px;
+     font-family: 'IBMPlexSansKR-Regular';
+ height: 10px;
+  font-size: 8px;
+ 
+ }
+ 
+ /* 우편 번호 */
+ #postcode{
+ width:190px;
+ 	display:inline-block;
+     margin-left: 180px;
+ }
+ .addr{
+ margin-bottom:25px;
+ }
+ 
+ 
+ .btn{
+   font-family: 'IBMPlexSansKR-Regular';
+    font-weight: bold;
+    width: 300px;
+    box-sizing: content-box;
+    margin: 0 180px 30px ;
+    height: 45px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #EE9BA3;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+ }
+
+ .small {
+   position: absolute;
+   width: 70px;
+   box-sizing: content-box;
+   margin-left: 10px;
+   margin-right: auto;
+   margin-bottom: auto;
+   height: 35px;
+   padding: 6px 15px;
+   border-radius: 5px;
+   outline: none;
+   border: none;
+   background: #EE9BA3;
+   color: white;
+   font-size: 14px;
+   position: absolute;
+   line-height: 35px;
+ }
+
+ /* 파일 선택 */
+ .brokerArea{
+    position: relative;
+ }
+ 
+
+#brokerImg{
+   width: 220px;
+   margin-top: 0;
+   margin-left: 180px; 
+   height: 45px;
+  /*  padding: 6px 15px; */
+   border-radius: 5px;
+   outline: none;
+   background: #F6F7F9;
+  display: inline-block;
+  border-style: hidden; 
+  border: 0px;
+ }
+
+ #fileselect:hover, .btn:hover, .open:hover{
+   cursor: pointer;
+ }
+
+
+ .signup1{
+    color:#748194;
+    font-size:30px;
+    text-align:center;
+ }
+ a{
+    text-decoration: none;
+ }
+ .signup2{
+    color:#748194;
+    font-size:16px;
+    text-align:center;
+ }
+ .membersignup{
+    display:initial;
+ }
+ .Brokersignup{
+    display:initial;
+ }
+ 
+ #rememberId{
+    width: 200px;
+    margin: 0 35px 20px ;
+    height: 20px;
+    outline: none;
+    border: none;
+    color: #748194;
+    font-size: 14px;
+    font-family: 'IBMPlexSansKR-Regular';
+ }
+ 
+ #else{
+    width: 100%;
+    height: 80px;
+    position: relative;
+ }
+ 
+ #Brokersignup{
+    color:#748194;
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+ }
+ 
+ #search{
+    color: #a6a6a7;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+ }
+
+ input[type="file" i] {
+   line-height: 35px;
+}
+
+/* 약관 */
+#agreementDivArea{
+   margin-left: 170px;
+   font-family: 'IBMPlexSansKR-Regular';
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+.terms{
+   width: 280px;
+   height: 200px;
+   background-color:  #F6F7F9;
+   margin: 5px 20px ;
+   padding: 6px 15px;
+   overflow: auto;
+}
+
+.open{
+   padding: 0;
+   position: absolute;
+   right: 160px;
+}

@@ -1,0 +1,102 @@
+
+
+.commentItem{
+    border-bottom:  0.5px solid #ccc;
+    padding: 5px;
+}
+.commentTitle{
+    padding-left: 30px;
+}
+.commentList{
+    list-style: none;
+}
+
+.commentIdBox{
+    font-weight: bolder;
+    color: #000;
+}
+
+.commentInfoBox{
+    font-size: small;
+    color: rgb(155, 155, 155);
+} 
+
+
+/*댓글*/
+.commentWrite>table {
+	width: 90%;
+	margin-top: 100px;
+}
+
+#commentContentArea {
+	width: 90%;
+}
+
+#commentContentArea > textarea {
+	resize: none;
+	width: 100%;
+}
+
+#commentBtnArea {
+	width: 100px;
+	text-align: center;
+}
+
+.cWriter {
+	display: inline-block;
+	margin-right: 30px;
+	vertical-align: top;
+}
+
+.cDate {
+	display: inline-block;
+	font-size: 0.5em;
+	color: gray;
+}
+.commentUpdateContent{
+	resize: none;
+	width: 100%;
+}
+#commentListArea {
+	list-style-type: none;
+}
+
+.cContent, .commentBtnArea {
+	height: 100%;
+	width: 100%;
+}
+
+.commentBtnArea {
+	text-align: right;
+}
+
+
+.comment-row{
+	border-top : 1px solid #ccc;
+	padding : 15px 0;
+}
+
+
+/* 댓글수정 테이블 */
+.commentItem>table {
+	width: 90%;
+	margin-top: 100px;
+}
+
+#commentUpdateContentArea{
+    width: 100%;
+    position: relative;
+}
+
+#commentUpdateContentArea > textarea {
+	resize: none;
+	width: 90%;
+    margin : 5px 15px;
+}
+
+#commentUpdateBtn{
+    position: absolute;
+    bottom: 34px;
+}
+
+

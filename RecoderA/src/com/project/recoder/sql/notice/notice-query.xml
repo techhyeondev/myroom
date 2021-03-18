@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+
+
+<entry key="getListCount">
+SELECT COUNT(*) FROM BOARD 
+WHERE BOARD_CD = '20' AND DELETE_FL = 'N'
+</entry>
+ 
+
+<entry key="selectNoticeList">
+SELECT * FROM
+(SELECT ROWNUM NNUM, V.*
+FROM
+(SELECT * FROM AV_NOTICE ORDER BY BOARD_NO DESC) V)
+WHERE NNUM BETWEEN ? AND ?
+</entry>
+
+<!-- 다음번호 얻어오기 -->
+<entry key="selectNextNo">
+SELECT SEQ_BOARDNO.NEXTVAL FROM DUAL
+</entry>
+<!-- 공지사항 등록 -->
+<entry key="insertNotice">
+INSERT INTO BOARD(BOARD_NO, TITLE, CONTENT, MEM_NO, CREATE_DT, READ_COUNT, DELETE_FL,
+BOARD_CD) VALUES(?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, 20)
+</entry>
+
+
+
+
+
+</properties>

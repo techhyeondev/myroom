@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+
+	<!-- 매물에서 메시지 전송 -->
+	<entry key="messageSend">
+		INSERT INTO MESSAGE VALUES(SEQ_MSGNO.NEXTVAL, ?, SYSDATE, ?, ?, 0)
+		
+	</entry>
+
+	<!--  -->
+	<entry key="messageList">
+		SELECT (SELECT MEM_NO FROM MEMBER WHERE MEM_NO = ME) ME, 
+		    (SELECT MEM_NICK FROM MEMBER WHERE MEM_NO = YOU) YOU,
+		    MSG_CONTENT, CREATE_DT, MSG_CNT, MEM_NO
+		    FROM  
+		    (SELECT MEM_NO ME, MEM_NO2 YOU, MSG_NO, MSG_CONTENT, CREATE_DT, MSG_CNT, MEM_NO FROM MEMBER
+		    JOIN MESSAGE USING(MEM_NO)
+		    UNION
+		    SELECT MEM_NO2 ME, MEM_NO YOU, MSG_NO, MSG_CONTENT, CREATE_DT, MSG_CNT, MEM_NO FROM MEMBER
+		    JOIN MESSAGE USING(MEM_NO))
+		    
+		WHERE MSG_NO IN 
+		    (SELECT MAX(MSG_NO) FROM  
+		        (SELECT MEM_NO ME, MEM_NO2 YOU, MSG_NO FROM MEMBER
+		        JOIN MESSAGE USING(MEM_NO)
+		        UNION
+		        SELECT MEM_NO2 ME, MEM_NO YOU, MSG_NO FROM MEMBER
+		        JOIN MESSAGE USING(MEM_NO))
+		    GROUP BY ME, YOU)
+		AND ME = ?
+	</entry>
+	
+	<entry key="messageUnI">
+		SELECT MSG_CONTENT ,CREATE_DT ,MEM_NO AS I,MEM_NO2 AS YOU,MSG_CNT, MEM_NICK
+		FROM MESSAGE
+		JOIN MEMBER USING(MEM_NO)
+		WHERE (MEM_NO = ? AND MEM_NO2 = ?) OR (MEM_NO = ? AND MEM_NO2 = ?)
+		ORDER BY CREATE_DT
+	</entry>
+	
+	<entry key="messageDelete">
+		DELETE FROM MESSAGE
+		WHERE (MEM_NO = ? AND MEM_NO2 = ?) OR (MEM_NO = ? AND MEM_NO2 = ?)
+	</entry>
+	
+</properties>
